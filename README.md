@@ -1,7 +1,7 @@
 ## Error handling
 
 ## Description
-In this program there I used assert, require, revert for error handling with logic of mymoney should be greater than 200 for require then mymoney should be less than 2000 for assert and my money should not be equal to 250 for revert .
+In this program there I used assert, require, revert for error handling with logic of _int should be greater than 1080 for require then _int should be less than 360 for revert and _val should be equal to 0 for assert .
 
 ### Installing
 
