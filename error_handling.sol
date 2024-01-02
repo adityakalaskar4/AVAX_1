@@ -1,17 +1,22 @@
-//SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.12;
 
-contract error_handling {
-    uint256 val=1;
-    function require_st(uint256 _int) public pure { 
-        require(_int > 1080, "Input must be greater than 1080"); 
-    }
-    function assert_st() public view {
-        assert(val == 0); //It takes only one parameter
-    }
-    function revert_st(uint256 _int) public pure {
-        if (_int < 360) {
-            revert("Input Must be greater than 360");
+contract _Money {
+    uint256 public tkn;
+
+    function  Money(uint256 _mny) public {
+        // Require is used to validate a condition
+        require(_mny > 1080, "The Value should be greater than 1080");
+
+        // Using assert() to ensure an internal condition
+        //and to check the invariants
+        assert(_mny < 3000);
+
+        // Setting the value
+        if(_mny == 300){
+            // Using revert() to revert the transaction
+        revert("Operation not proceed"); 
         }
+        tkn = _mny;
     }
 }
